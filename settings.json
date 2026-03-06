@@ -1,0 +1,33 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "title": "KB Assistant Settings",
+  "properties": {
+    "litellmBaseUrl": {
+      "title": "LiteLLM Base URL",
+      "type": "string",
+      "default": "http://REPLACE_WITH_LITELLM_HOST:4000/v1",
+      "minLength": 1
+    },
+    "litellmModel": {
+      "title": "LiteLLM Model",
+      "type": "string",
+      "default": "REPLACE_WITH_MODEL",
+      "minLength": 1
+    },
+    "litellmApiKey": {
+      "title": "LiteLLM API Key",
+      "type": "string",
+      "format": "secret",
+      "minLength": 1
+    },
+    "maxArticles": {
+      "title": "Max Articles",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 20,
+      "default": 6
+    }
+  },
+  "required": ["litellmBaseUrl", "litellmModel", "litellmApiKey"]
+}

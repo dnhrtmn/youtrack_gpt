@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/youtrack-app.json",
+  "name": "knowledgebaseassistant",
+  "title": "KB Assistant",
+  "description": "Dashboard widget to ask questions about YouTrack knowledge base articles via LiteLLM.",
+  "version": "0.1.0",
+  "vendor": {
+    "name": "Placeholder Vendor",
+    "url": "https://example.local"
+  },
+  "minYouTrackVersion": "2025.3.0",
+  "icon": "widgets/kb-assistant/icon.svg",
+  "httpHandlers": [
+    {
+      "path": "backend",
+      "file": "backend.js"
+    }
+  ],
+  "widgets": [
+    {
+      "key": "kb-assistant-widget",
+      "name": "knowledgebaseassistant",
+      "indexPath": "widgets/kb-assistant/index.html",
+      "extensionPoint": "DASHBOARD_WIDGET",
+      "description": "Ask questions about KB articles with live search and cited links."
+    }
+  ],
+  "permissions": [
+    "READ_ARTICLE"
+  ]
+}
